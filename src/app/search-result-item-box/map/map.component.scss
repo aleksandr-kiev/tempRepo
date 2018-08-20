@@ -1,0 +1,215 @@
+.map-standalone{
+  display:block;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  *{
+    text-align: left;
+    color: #d6d6d6;
+    margin:0;
+  }
+  .map-head-title{
+    padding-bottom: 10px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #acacac;
+
+    *{
+      font-size: 13px;
+      padding-top: 3px;
+    }
+    p{
+      display:inline-block;
+      color: #DBDBDB;
+    }
+    p:first-child{
+      color:#41cece;
+      font-weight: 900;
+    }
+  }
+  h6.map-title{
+    text-transform: uppercase;
+    font-size: 14px;
+    color: white;
+    span{
+      color: #ce9b46;
+    }
+  }
+  .map-analyse{
+    font-size: 15px;
+    margin-top: 12px;
+  }
+  .map-analyse-content{
+    width: 100%;
+    height: auto;
+    margin-top: 4px;
+  }
+  .map-defenitie{
+    margin: 15px 0;
+    text-transform: uppercase;
+  }
+  .map-defenitie-content{
+
+  }
+  .map-procedure{
+    margin-top: 11px;
+  }
+  .procedure-tab{
+    margin-top: 6px;
+
+    .procedure-row{
+      width: 100%;
+      border: 1px solid #B2B2B2;
+      border-top: none;
+      *{
+        display: inline-block;
+        text-align: center;
+        line-height: 25px;
+        padding: 1px 5px;
+      }
+      .procedure-step{
+        width: 18%;
+        float: left;
+      }
+      .procedure-action{
+        width: 82%;
+        border-left: 1px solid #B2B2B2;
+        text-align: left;
+      }
+      .map-sub-title{
+        text-align: center;
+        font-weight: 600;
+      }
+    }
+    .procedure-row:first-child{
+      border-top: 1px solid #B2B2B2;
+    }
+  }
+  .map-inbegrepen{
+    margin-top: 18px;
+  }
+  .map-inbegrepen-content{}
+  .map-inbegrepen-content-video{
+    margin: 10px 0;
+  }
+  .map-sub-title{
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    display: block;
+  }
+  .map-content{
+    font-size: 14px;
+    line-height: 20px;
+    display: block;
+
+    .map-block-label{
+      height: auto;
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      font-weight: 600;
+      color: white;
+    }
+    >.map-block-content{
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 10px 0 20px 0;
+      >p{
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+      }
+
+      table{
+        border: 1px solid black;
+        width: 100%;
+        table-layout: fixed;
+        background-color: white;
+
+        thead{
+          tr{
+            background-color: #0200a0;
+            th:not(:last-child){
+              border-right: 1px solid white;
+
+            }
+            th{
+              *{
+                color: white;
+                font-weight: 600;
+                word-break: break-all;
+              }
+            }
+          }
+        }
+        tbody{
+          tr{
+            td{
+              border: 1px solid black;
+              *{
+                color: black;
+                word-break: break-all;
+              }
+            }
+          }
+        }
+      }
+
+      ul, ol{
+        display: list-item;
+        list-style: none;
+        padding-left: 20px;
+        > li{
+          display: list-item;
+          list-style: none;
+          >p:first-child{
+            list-style: square;
+            display: list-item;
+          }
+          >ul, ol{
+            display: list-item;
+            list-style: none;
+            > li{
+              display: list-item;
+              list-style: none;
+              p:first-child{
+                list-style: circle;
+                display: list-item;
+              }
+            }
+
+          }
+
+        }
+
+      }
+    }
+  }
+}
+
+.dev-fon{
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:100%;
+  opacity: .5;
+  img{
+    width:100%;
+    height : auto;
+  }
+}
+
+@media screen and (orientation : landscape){
+  .map-standalone{
+    height : auto;
+    .map-inbegrepen-content-video{
+      height: 250px;
+      iframe{
+        height : 100%;
+      }
+    }
+  }
+}

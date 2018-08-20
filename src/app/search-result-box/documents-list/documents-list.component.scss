@@ -1,0 +1,42 @@
+.docs-list-box{
+  height : 100%;
+  display : flex;
+  flex-direction: column;
+  justify-items: flex-start;
+  align-items: stretch;
+
+  .docs-list-item{
+    border-bottom: 2px solid gray;
+    margin-bottom: 15px;
+    *{
+      text-align: left;
+      color:white;
+      margin:0;
+    }
+
+    .sub-title{
+      *{
+        font-size: 13px;
+        padding-top: 3px;
+      }
+      p{
+        display:inline-block;
+        color:#41cece;
+      }
+      p:first-child{
+      }
+    }
+    p.item-description{
+      font-size: 14px;
+      line-height: 20px;
+      padding-bottom: 14px;
+      em{
+        color: #e4ab4a;
+      }
+    }
+  }
+
+  .docs-list-item-last{
+    border: none;
+  }
+}

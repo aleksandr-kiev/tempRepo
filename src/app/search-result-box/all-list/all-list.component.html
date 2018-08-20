@@ -1,0 +1,15 @@
+<div class="all-list-box">
+  <div class="all-list-item" *ngFor="let item of items; last as isLAst" data-id="{{item.id}}"
+       [ngClass]="{'all-list-item-last': isLAst}" (click)="goToItem(item.id, item.type)">
+    <div class="list-item-title-box">
+      <p class="list-item-title"*ngIf="item.label && item.type !== 'publication'">{{item.label}}</p>
+      <p class="list-item-type">{{item.type}}</p>
+    </div>
+    <div class="sub-title">
+      <p>&#62;</p>
+      <p *ngIf="item.type !== 'publication'">{{item.labelDocument}}</p>
+      <p *ngIf="item.type == 'publication'">{{item.label}}</p>
+    </div>
+    <p class="item-description" [innerHTML]="item.content"></p>
+  </div>
+</div>

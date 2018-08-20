@@ -1,0 +1,39 @@
+<div class="sign-in">
+  <!--<div class="dev-fon">-->
+    <!--<img src="assets/images/sign-in.png" height="auto">-->
+  <!--</div>-->
+  <div class="sign-img">
+    <div>
+      <img src="assets/images/logo.png">
+    </div>
+
+  </div>
+  <div class="sign-form">
+
+    <form class="example-form" #f="ngForm" name="signIn" (ngSubmit)="onSubmit(f)">
+      <mat-form-field hideRequiredMarker="true" floatLabel="never" class="example-full-width">
+        <input name="username" required  ngModel type="email" matInput placeholder="Email address">
+      </mat-form-field>
+
+      <mat-form-field hideRequiredMarker="true" floatLabel="never" class="example-full-width">
+        <input name="password" required ngModel type="password" matInput placeholder="Password">
+      </mat-form-field>
+
+      <button type="submit" mat-raised-button color="primary">Sign in</button>
+    </form>
+
+  </div>
+  <!--<div class="sign-forgot">-->
+    <!--<a class="sign-forgot-anchor" routerLink="/forgot-password">Forgot password?</a>-->
+  <!--</div>-->
+  <!--<div class="sign-not-member">-->
+    <!--<p>Not a member yet?</p>-->
+    <!--<p>Please send us a request!</p>-->
+  <!--</div>-->
+  <!--<div class="sing-request-access">-->
+    <!--<button mat-raised-button color="primary" routerLink="/request-access">Request access</button>-->
+  <!--</div>-->
+  <div class="sign-wave">
+    <img src="assets/images/waves.png">
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="block-standalone">
+  <div class="sub-title" *ngIf="block.labelDocument">
+    <p>&#62;</p>
+    <p>{{block.labelDocument}}</p>
+  </div>
+  <p class="block-standalone-title" *ngIf="block.label">{{block.label}}</p>
+  <p class="block-standalone-description" [innerHTML]="block.content"></p>
+</div>

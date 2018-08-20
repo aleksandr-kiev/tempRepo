@@ -1,0 +1,212 @@
+.share-document{
+  height: 100%;
+  background-color: #31353a;
+
+  .share-doc-nav{
+    height : 65px;
+    background-color: #23292d;
+    position: relative;
+
+    .result-item-block{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      .item-block-phrase{
+        margin: auto;
+        *{
+          display: inline-block;
+          margin: 0;
+        }
+        h2{
+          text-transform: uppercase;
+          font-size : 17px;
+          color : white;
+          font-weight: 400;
+          margin-bottom: 0;
+        }
+      }
+
+    }
+    a{
+      position: absolute;
+      right: 10px;
+      top: 18px;
+      mat-icon{
+        width: 29px;
+        height: auto;
+        svg{
+          fill : #d84c47;
+        }
+      }
+    }
+  }
+  .share-doc-title{
+    margin-top: 54px;
+    h2{
+      font-size : 19px;
+      color : white;
+      text-align : center;
+      font-weight: 400;
+      margin-bottom : 0;
+    }
+  }
+  .share-doc-form{
+    display: block;
+    width : 100%;
+    height: 30%;
+    form[name='share-document']{
+      width : 80%;
+      margin: auto;
+      padding-top : 27px;
+      height : 100%;
+
+      >*{
+        font-size : 15px;
+        color : white;
+      }
+
+      mat-form-field {
+        height: 53px;
+        div.mat-input-wrapper.mat-form-field-wrapper{
+          >.mat-input-flex.mat-form-field-flex{
+            >.mat-input-infix.mat-form-field-infix{
+              >input, span>label{
+                padding-left : 3px;
+              }
+
+              >input{
+                color : #bebfbf;
+                caret-color : #41cece;
+              }
+
+              >span>label{
+                color : #5a5d61;
+              }
+            }
+          }
+
+          >.mat-input-underline{
+            background-color : #5a5d61;
+            > span{
+              background-color: #41cece;
+            }
+
+          }
+        }
+
+      }
+
+      >button{
+        height: 42px;
+        width: 83.5%;
+        margin: 7% auto 0 auto;
+        display: none;
+        border-radius: 7px;
+        background-color : #f7616c;
+      }
+
+      >a{
+        height: 42px;
+        width: 83.5%;
+        margin: 7% auto 0 auto;
+        display: block;
+        border-radius: 7px;
+        background-color : #41cece;
+        padding-top: 2px;
+        text-decoration: none;
+      }
+      a.share-doc-btn{
+        p.share-btn-ready{
+
+        }
+        .pending, .resolve{
+          display: none;
+        }
+      }
+      a.share-pending{
+        border-radius: 20px;
+        width: 40px;
+        padding: 0;
+        min-width: 40px;
+        display: block;
+        p.share-btn-ready{
+          display: none;
+        }
+        mat-icon.pending{
+          display: block;
+          margin: auto;
+          width: 30px;
+          height: 30px;
+          position: relative;
+          top: 6px;
+          animation: rotation 1.5s infinite linear;
+        }
+      }
+      a.share-resolve{
+        border-radius: 20px;
+        width: 120px;
+        padding: 0;
+        p.share-btn-ready{
+          display: none;
+        }
+        mat-icon.pending{
+          display: none;
+        }
+
+        .resolve{
+          display: inline-block;
+          margin: 0;
+        }
+        mat-icon.resolve{
+          margin-right: 3px
+        }
+        p.resolve{
+          margin-left: 3px
+        }
+      }
+
+      .example-full-width {
+        width: 100%;
+      }
+    }
+  }
+  .share-doc-wave{
+    padding: 0;
+    position: absolute;
+    bottom: 0;
+
+    img{
+      width : 100%;
+      height: auto;
+    }
+  }
+}
+
+@-moz-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+

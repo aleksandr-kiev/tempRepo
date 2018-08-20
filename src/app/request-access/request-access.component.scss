@@ -1,0 +1,211 @@
+.request-access{
+  margin : 0;
+  padding : 0;
+  position: relative;
+  background-color : #31353a;
+  height: 100%;
+  align-content: flex-start;
+
+  .request-access-nav{
+    height : 65px;
+    background-color: #23292d;
+
+    .request-access-nav-block{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      a{
+        position: absolute;
+        left: 6px;
+        top: 14px;
+        mat-icon{
+          width: 38px;
+          height: auto;
+          svg{
+            fill : #41cece;
+          }
+        }
+      }
+      h2{
+        text-transform: uppercase;
+        font-size : 17px;
+        color : white;
+        font-weight: 400;
+        margin-bottom : 0;
+      }
+    }
+  }
+  .request-access-title{
+    margin-top: 54px;
+    h2{
+      font-size : 19px;
+      color : white;
+      text-align : center;
+      font-weight: 400;
+      margin-bottom : 0;
+    }
+  }
+  .request-access-form{
+    display: block;
+    width : 100%;
+    height: 30%;
+    form[name='request-access']{
+      width : 80%;
+      margin: auto;
+      padding-top : 27px;
+      height : 100%;
+
+      >*{
+        font-size : 15px;
+        color : white;
+      }
+
+      mat-form-field {
+        height: 53px;
+        div.mat-input-wrapper.mat-form-field-wrapper{
+          >.mat-input-flex.mat-form-field-flex{
+            >.mat-input-infix.mat-form-field-infix{
+              >input, span>label{
+                padding-left : 3px;
+              }
+
+              >input{
+                color : #bebfbf;
+                caret-color : #41cece;
+              }
+
+              >span>label{
+                color : #5a5d61;
+              }
+
+              mat-select{
+                >div.mat-select-trigger{
+                  >div.mat-select-value{
+                    color : #bebfbf
+                  }
+
+                  .mat-select-arrow-wrapper{
+                    .mat-select-arrow{
+                      color : #41cece;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          >.mat-input-underline{
+            background-color : #5a5d61;
+            > span{
+              background-color: #41cece;
+            }
+
+          }
+        }
+
+
+
+      }
+
+      mat-radio-group{
+        margin-top: 14px;
+        display: block;
+        mat-radio-button{
+          display : block;
+
+          .mat-radio-outer-circle{
+            border-color: #bebfbf;
+          }
+          .mat-radio-inner-circle{
+            background-color: #41cece;
+          }
+        }
+        mat-radio-button:first-child{
+          margin-bottom: 3px;
+        }
+      }
+
+      >button{
+        height: 42px;
+        width: 83.5%;
+        margin: 22px auto 0 auto;
+        display: none;
+        border-radius: 7px;
+        background-color : #41cece;
+      }
+
+      >a{
+        height: 42px;
+        width: 83.5%;
+        margin: 22px auto 0 auto;
+        display: block;
+        border-radius: 7px;
+        background-color : #41cece;
+        padding-top: 2px;
+        text-decoration: none;
+      }
+
+      .example-full-width {
+        width: 100%;
+      }
+    }
+  }
+  .request-access-wave{
+    padding: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+
+    img{
+      width : 100%;
+      height: auto;
+    }
+  }
+}
+
+.dev-fon{
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:100%;
+  img{
+    width:100%;
+    height : auto;
+  }
+}
+
+@media screen and (orientation : landscape){
+  .request-access{
+    .request-access-form{
+      padding-bottom : 40px;
+    }
+    .request-access-wave{
+      position : relative
+    }
+  }
+}
+@media screen and (max-height : 571px){
+  .request-access {
+    .request-access-title{
+      margin-top: 30px;
+      h2{
+        font-size: 17px;
+      }
+    }
+    .request-access-form form[name='request-access']{
+      height: auto;
+      mat-form-field{
+        height: 40px;
+        font-size: 14px;
+      }
+      mat-radio-group{
+        mat-radio-button{}
+        font-size: 14px;
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+<div class="search-result-box"  appScrollBottom (scrollPosition)="nextQuery($event)">
+  <!--<div class="col-12 dev-fon">
+    <img src="assets/images/blocks.png">
+  </div>-->
+
+  <app-search></app-search>
+
+  <div class="result-box-container">
+    <div class="result-box-nav">
+
+      <div class="result-nav-item" routerLinkActive="result-active" [routerLinkActiveOptions]="{exact: true}">
+        <a routerLink="/search-result/all">
+          <p>All</p>
+        </a>
+      </div>
+
+      <div class="result-nav-item" routerLinkActive="result-active" [routerLinkActiveOptions]="{exact: true}">
+        <a routerLink="/search-result/blocks">
+          <p>Blocks</p>
+        </a>
+      </div>
+
+      <div class="result-nav-item" routerLinkActive="result-active" [routerLinkActiveOptions]="{exact: true}">
+        <a routerLink="/search-result/maps">
+          <p>Maps</p>
+        </a>
+      </div>
+
+      <div class="result-nav-item" routerLinkActive="result-active" [routerLinkActiveOptions]="{exact: true}">
+        <a routerLink="/search-result/documents">
+          <p>Publications</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="result-box-router-outlet">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

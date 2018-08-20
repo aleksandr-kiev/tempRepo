@@ -1,0 +1,32 @@
+<div class="search-box">
+  <!--<div class="col-12 dev-fon">
+    <img src="assets/images/proximus.png">
+  </div>-->
+
+  <app-search></app-search>
+
+  <div class="search-router-outlet">
+    <router-outlet></router-outlet>
+  </div>
+
+  <div class="search-fixed-bottom">
+    <div class="search-powered-by">
+      <p>Powered by Information Mapping</p>
+    </div>
+
+    <div class="search-divider">
+      <div></div>
+    </div>
+
+    <div class="search-user-title">
+      <p>{{account.firstName}} {{account.lastName}}</p>
+    </div>
+
+    <div class="search-sign-out">
+      <a (click)="signOut()">
+        <p>Sign out</p>
+      </a>
+    </div>
+  </div>
+
+</div>

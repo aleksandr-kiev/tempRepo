@@ -1,0 +1,42 @@
+<div class="map-standalone">
+  <div class="map-head-title"  *ngIf="map.labelDocument">
+    <p>&#62;</p>
+    <p>{{map.labelDocument}}</p>
+  </div>
+  <!--<h6 class="map-title ">De belfius <span>pulse</span> white rekening</h6>-->
+  <!--<p class="map-analyse map-sub-title">Analyse</p>-->
+  <!--<img class="map-analyse-content" src="assets/images/map-analyse.png">-->
+  <p class="map-defenitie map-sub-title"*ngIf="map.label">{{map.label}}</p>
+  <div class="map-definitie-content map-content" *ngFor="let blockItem of map.blocks; last as isLAst">
+      <p class="map-block-label">{{blockItem.label}}</p>
+    <div class="map-block-content" [innerHTML]="blockItem.content"></div>
+  </div><!--
+  <p class="map-procedure map-sub-title">Procedure</p>
+
+  <div class="procedure-tab">
+    <div class="procedure-row">
+      <p class="procedure-step map-sub-title">Step</p>
+      <p class="procedure-action map-sub-title">Action</p>
+    </div>
+    <div class="procedure-row">
+      <p class="procedure-step map-content">1</p>
+      <p class="procedure-action map-content">Lorem ipsum dolor sit amet</p>
+    </div>
+    <div class="procedure-row">
+      <p class="procedure-step map-content">2</p>
+      <p class="procedure-action map-content">Sed do eiusmod tempor incididunt</p>
+    </div>
+    <div class="procedure-row">
+      <p class="procedure-step map-content">3</p>
+      <p class="procedure-action map-content">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+    </div>
+  </div>
+
+  <p class="map-inbegrepen map-sub-title">Inbegrepen in het maandelijkse forwait</p>
+  <p class="map-inbegrepen-content map-content">Quisque maximus malesuada feugiat.</p>
+
+  <div class="map-inbegrepen-content-video">
+    <iframe width="100%" height="auto" src="https://www.youtube.com/embed/fCwX6j4dwB4" frameborder="0" allowfullscreen></iframe>
+  </div>-->
+
+</div>

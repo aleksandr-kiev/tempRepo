@@ -1,0 +1,10 @@
+<div class="docs-list-box">
+  <div class="docs-list-item" *ngFor="let publication of publications; last as isLAst" data-id="{{publication.id}}"
+       [ngClass]="{'docs-list-item-last': isLAst}" (click)="goToPublication(publication.id)">
+    <div class="sub-title"  *ngIf="publication.label">
+      <p>&#62;</p>
+      <p>{{publication.label}}</p>
+    </div>
+    <p class="item-description" [innerHTML]="publication.content"></p>
+  </div>
+</div>

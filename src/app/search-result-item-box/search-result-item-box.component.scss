@@ -1,0 +1,131 @@
+.search-result-item-box{
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  .result-item-router{
+    background-color: #2e3237;
+    padding: 15px 30px 0 30px;
+    flex: 1;
+    height: 0;
+    overflow-y: scroll;
+    em{
+      color: #e4ab4a;
+    }
+
+  }
+  .result-item-nav{
+    height : auto;
+    background-color: #23292d;
+
+    .result-item-block{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      min-height: 55px;
+      a{
+        mat-icon{
+          width: 38px;
+          height: auto;
+          svg{
+            fill : #41cece;
+          }
+        }
+      }
+      a:nth-child(1){
+        height: 38px;
+      }
+      a:last-child{
+        margin-right: 13px;
+        mat-icon{
+          width: 23px;
+          position: relative;
+          top: -1px;
+          height: auto;
+        }
+
+      }
+      .item-block-phrase{
+        max-width: 100%;
+        overflow-x: hidden;
+        *{
+          display: inline-block;
+          margin: 0;
+        }
+        h2{
+          text-transform: uppercase;
+          font-size : 17px;
+          color : white;
+          font-weight: 400;
+          margin-bottom: 0;
+        }
+        p{
+          color: #ce9b46;
+          margin-left: 3px;
+          max-width: 100%;
+          word-break: break-all
+        }
+      }
+
+    }
+  }
+
+  .result-item-footer{
+    .result-item-footer-box{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: stretch;
+      background-color: #23292d;
+      width: 100%;
+      height: 65px;
+
+      .result-item-footer-item{
+        width: 33.333%;
+        border-right: 2px solid #5a5d61;
+        padding-top: 11px;
+        a{
+          text-decoration:none;
+          width: 100%;
+          height: 100%;
+          *{
+            display: block;
+            margin: 0;
+          }
+          mat-icon{
+            color: #5a5d61;
+            margin: 0 auto 3px auto;
+          }
+          p{
+            font-size:12px;
+            color: #5a5d61;
+            text-align: center;
+          }
+        }
+      }
+      .result-item-footer-item:last-child{
+        border: none;
+      }
+      .result-item-footer-item{
+        .active-item-footer{
+          *{
+            color: white;
+          }
+        }
+      }
+    }
+
+  }
+
+}
+
+@media screen and (orientation : landscape){
+  html, body{
+    height: 100%;
+  }
+}
+

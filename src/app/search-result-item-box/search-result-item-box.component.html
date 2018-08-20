@@ -1,0 +1,42 @@
+
+<div class="search-result-item-box">
+  <div class="result-item-nav">
+    <div class="result-item-block">
+      <a (click)="back()">
+        <mat-icon svgIcon="left-arrow"></mat-icon>
+      </a>
+      <div class="item-block-phrase">
+        <h2>search</h2>
+        <p>{{search_target}}</p>
+      </div>
+      <a routerLink="/share-document">
+        <mat-icon svgIcon="upload"></mat-icon>
+      </a>
+    </div>
+  </div>
+  <div class="result-item-router">
+    <router-outlet></router-outlet>
+  </div>
+  <div class="result-item-footer">
+    <div class="result-item-footer-box">
+      <div class="result-item-footer-item">
+        <a routerLink="/search-result-item-box/block" routerLinkActive="active-item-footer">
+          <mat-icon svgIcon="block"></mat-icon>
+          <p>Block</p>
+        </a>
+      </div>
+      <div class="result-item-footer-item">
+        <a routerLink="/search-result-item-box/map" routerLinkActive="active-item-footer">
+          <mat-icon svgIcon="map"></mat-icon>
+          <p>Map</p>
+        </a>
+      </div>
+      <div class="result-item-footer-item">
+        <a routerLink="/search-result-item-box/document" routerLinkActive="active-item-footer">
+          <mat-icon svgIcon="document"></mat-icon>
+          <p>Publications</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

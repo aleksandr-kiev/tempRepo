@@ -1,0 +1,12 @@
+<div class="blocks-list-box">
+  <div class="blocks-list-item" *ngFor="let block of blocks; last as isLAst" data-id="{{block.id}}"
+  [ngClass]="{'blocks-list-item-last': isLAst}" (click)="goToBlolck(block.id)">
+    <p class="list-item-title" *ngIf="block.label">{{block.label}}</p>
+    <div class="sub-title" *ngIf="block.labelDocument">
+      <p>&#62;</p>
+      <p>{{block.labelDocument}}</p>
+    </div>
+    <p class="item-description" [innerHTML]="block.content"></p>
+
+  </div>
+</div>

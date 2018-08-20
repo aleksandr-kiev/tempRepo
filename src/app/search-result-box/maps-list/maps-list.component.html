@@ -1,0 +1,11 @@
+<div class="maps-list-box">
+  <div class="maps-list-item" *ngFor="let map of maps; last as isLAst" data-id="{{map.id}}"
+       [ngClass]="{'maps-list-item-last': isLAst}" (click)="goToMap(map.id)">
+    <p class="list-item-title" *ngIf="map.label">{{map.label}}</p>
+    <div class="sub-title" *ngIf="map.labelDocument">
+      <p>&#62;</p>
+      <p>{{map.labelDocument}}</p>
+    </div>
+    <p class="item-description" [innerHTML]="map.content"></p>
+  </div>
+</div>

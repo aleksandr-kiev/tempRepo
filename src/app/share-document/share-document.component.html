@@ -1,0 +1,35 @@
+<div class="share-document">
+  <div class="share-doc-nav">
+    <div class="result-item-block">
+      <div class="item-block-phrase">
+        <h2>Share your document</h2>
+      </div>
+    </div>
+    <a (click)="location.back()">
+      <mat-icon svgIcon="close-icon"></mat-icon>
+    </a>
+  </div>
+  <div class="col-12 share-doc-title">
+    <h2>Fill in your email address</h2>
+  </div>
+  <div class="col-12 share-doc-form">
+    <form name="share-document">
+      <mat-form-field hideRequiredMarker="true" floatLabel="never" class="example-full-width">
+        <input name="email" required type="email" matInput placeholder="Email address">
+      </mat-form-field>
+
+      <button type="submit" mat-raised-button>Share</button>
+      <a class="share-doc-disable share-doc-btn" (click)="pendingSimulation()"
+         [ngClass]="{'share-pending': (loading == 1), 'share-resolve': (loading == 2)}" mat-raised-button>
+        <p class="share-btn-ready">Share</p>
+        <mat-icon class="pending" svgIcon="pending-icon"></mat-icon>
+
+        <mat-icon class="resolve" svgIcon="paper-plane"></mat-icon>
+        <p class="resolve">Sent!</p>
+      </a>
+    </form>
+  </div>
+  <div class="share-doc-wave">
+    <img src="assets/images/waves.png">
+  </div>
+</div>

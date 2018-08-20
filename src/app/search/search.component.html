@@ -1,0 +1,27 @@
+<div class="search-form">
+
+  <form class="example-form" (ngSubmit)="optionSearch($event)">
+    <a routerLink="/search-result/blocks">
+      <mat-icon class="search-icon" color="primary" svgIcon="search-icon"></mat-icon>
+    </a>
+    <mat-form-field class="example-full-width" floatLabel="never">
+      <!--<input name="search" matInput placeholder="Search publications" aria-label="Search" (blur)="testBlur()" (focus)="testFocus()" [(ngModel)]="value">
+      <a routerLink="/search-empty" mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+        <mat-icon svgIcon="close-icon" matSuffix></mat-icon>
+      </a>-->
+
+      <input type="text" placeholder="Search" #searchInput aria-label="Number" matInput [formControl]="searchTerm"
+             [matAutocomplete]="auto" [(ngModel)]="value">
+      <a *ngIf="value" mat-button matSuffix mat-icon-button aria-label="Clear" (click)="clearResults()">
+        <mat-icon svgIcon="close-icon" matSuffix></mat-icon>
+      </a>
+      <mat-autocomplete (optionSelected)="optionSearch($event)" #auto="matAutocomplete">
+        <p class="recent-searches" *ngIf="showRecent"> Recent searches </p>
+        <mat-option *ngFor="let item of searchResult" [value]="item">
+          {{ item }}
+        </mat-option>
+      </mat-autocomplete>
+
+    </mat-form-field>
+  </form>
+</div>

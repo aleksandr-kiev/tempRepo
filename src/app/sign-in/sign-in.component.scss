@@ -1,0 +1,210 @@
+.sign-in{
+  margin : 0;
+  padding : 0;
+  position: relative;
+  background-color : #31353a;
+  height: 100%;
+  align-content: flex-start;
+  padding-top: 33.285%;
+
+  .sign-img{
+    display: block;
+    height: auto;
+
+    div{
+      width : 40.15%;
+      margin: auto;
+
+      img{
+        width : 100%;
+        height : auto;
+      }
+    }
+
+  }
+
+  .sign-form{
+    display: block;
+    width : 100%;
+
+    >form.example-form{
+      width : 80%;
+      margin: auto;
+      padding-top : 10%;
+      height : 100%;
+
+      >*{
+        font-size : 15px;
+        color : white;
+      }
+
+      mat-form-field {
+        height: 53px;
+        div.mat-input-wrapper.mat-form-field-wrapper{
+          >.mat-input-flex.mat-form-field-flex{
+            >div.mat-input-suffix.mat-form-field-suffix{
+              a{
+                span{
+                  position: relative;
+                  top: 3px;
+                }
+              }
+            }
+            >.mat-input-infix.mat-form-field-infix{
+              >input, span>label{
+                padding-left : 3px;
+              }
+
+              >input{
+                color : #bebfbf;
+                caret-color : #41cece;
+              }
+
+              >span>label{
+                color : #5a5d61;
+              }
+            }
+          }
+
+          >.mat-input-underline{
+            background-color : #5a5d61;
+            > span{
+              background-color: #41cece;
+            }
+
+          }
+        }
+
+      }
+
+      >button, a{
+        height: 42px;
+        width: 83.5%;
+        margin: 7% auto 0 auto;
+        display: block;
+        border-radius: 7px;
+        background-color : #41cece;
+      }
+
+      .example-full-width {
+        width: 100%;
+      }
+    }
+  }
+
+  .sign-forgot{
+    a.sign-forgot-anchor{
+      display : block;
+      width: 41%;
+      text-align: center;
+      font-size: 14px;
+      color: #bebfbf;
+      margin: 17px auto 0 auto;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  .sign-not-member{
+    p{
+      color : white;
+      font-size : 14px;
+      display : block;
+      text-align : center;
+      margin : 0;
+    }
+    p:first-child{
+      margin-top : 43px;
+    }
+    p:last-child{
+      position : relative;
+      bottom : 5px;
+    }
+  }
+
+  .sing-request-access{
+    button{
+      height: 42px;
+      width: 66.8%;
+      margin: 2% auto 0 auto;
+      display: block;
+      border-radius: 7px;
+      background-color: #3d4144;
+    }
+    button:focus{
+      outline: none;
+    }
+  }
+
+  .sign-wave{
+    padding: 0;
+    position: absolute;
+    bottom: 0;
+
+    img{
+      width : 100%;
+      height: auto;
+    }
+  }
+}
+
+@media screen and (max-height: 660px) {
+  .sign-in{
+    padding-top: 20%;
+
+    .sign-not-member p:first-child{
+      margin-top: 30px;
+    }
+  }
+}
+
+@media screen and (max-height: 580px) {
+  .sign-in{
+    padding-top: 15%;
+  }
+}
+@media screen and (max-height: 570px) {
+  .sign-in{
+    padding-top: 10%;
+    .sign-form > form.example-form{
+      padding-top: 20px;
+    }
+  }
+}
+
+@media screen and (min-aspect-ratio: 10/16) {
+  .sign-in {
+    padding-top: 20px;
+    .sign-not-member p:first-child{
+      margin-top: 15px;
+    }
+  }
+}
+
+@media screen and (min-aspect-ratio: 18/25) {
+  .sign-in {
+    padding-top: 20px;
+    .sign-not-member p:first-child{
+      margin-top: 15px;
+    }
+    .sign-wave{
+      position : relative
+    }
+  }
+}
+@media screen and (orientation : landscape){
+  .sign-in{
+    padding-top: 50px;
+    .sign-form{
+      > form.example-form{
+        padding-top: 50px;
+      }
+    }
+    .sing-request-access{
+      padding-bottom : 40px;
+    }
+    .sign-wave{
+      position : relative
+    }
+  }
+}
